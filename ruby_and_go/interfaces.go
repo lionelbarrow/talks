@@ -19,5 +19,3 @@ func (this Rational) Add(other Number) Number {
 type Irrational struct {
   approximateValue float64
 }
-
-

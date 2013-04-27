@@ -30,10 +30,9 @@
 </section>
 
 <section class="slide">
-<h2>Come talk to me!</h2>
-  <p>Lionel Barrow - Developer at Braintree</p>
-  <p>@lionelbarrow - lionel.barrow@getbraintree.com</p>
-  <p>Always want to hear from our merchants</p>
+<p>Lionel Barrow - Developer at Braintree</p>
+<p>@lionelbarrow - lionel.barrow@getbraintree.com</p>
+<p>Always want to hear from our merchants</p>
 </section>
 
 <section class="slide">
@@ -132,77 +131,47 @@
 <section class="slide">
 <h2>What is idiomatic code?</h2>
 <ul>
-  <li>PLs influence programmers in subtle ways</li>
-</ul>
-</section>
-
-<section class="slide">
-<h2>What is idiomatic code?</h2>
-<ul>
-  <li>PLs influence programmers in subtle ways</li>
-  <li>Simple example: parens are optional in Ruby. Lets you do:
-
-<pre><code class="ruby">it "is a testing example" do
-end</pre></code>
-
-  Instead of:
-
-<pre><code class="ruby">it("is a testing example" do
-end)</pre></code></li>
-</ul>
-</section>
-
-<section class="slide">
-<h2>What is idiomatic code?</h2>
-<ul>
-  <li>PLs influence programmers in subtle ways</li>
-  <li>Simple example: parens are optional in Ruby. Lets you do:
-
-<pre><code class="ruby">it "is a testing example" do
-end</pre></code>
-
-  Instead of:
-
-<pre><code class="ruby">it("is a testing example" do
-end)</pre></code></li>
-<li>Simple definition: Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
-</ul>
-</section>
-
-<section class="slide">
-<h2>What is idiomatic code?</h2>
-<ul>
-  <li>PLs influence programmers in subtle ways</li>
-  <li>Simple example: parens are optional in Ruby. Lets you do:
-
-<pre><code class="ruby">it "is a testing example" do
-end</pre></code>
-
-  Instead of:
-
-<pre><code class="ruby">it("is a testing example" do
-end)</pre></code></li>
   <li>Simple definition: Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
-  <li>More importantly, idiomatic code is the community standard way or writing code; it <em>looks</em> familiar.</li>
 </ul>
 </section>
 
 <section class="slide">
 <h2>What is idiomatic code?</h2>
 <ul>
-  <li>PLs influence programmers in subtle ways</li>
-  <li>Simple example: parens are optional in Ruby. Lets you do:
-
-<pre><code class="ruby">it "is a testing example" do
-end</pre></code>
-
-  Instead of:
-
-<pre><code class="ruby">it("is a testing example" do
-end)</pre></code></li>
   <li>Simple definition: Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
-  <li>More importantly, idiomatic code is the community standard way or writing code; it <em>looks</em> familiar.</li>
+  <li>More important: idiomatic code is the community standard way or writing code; it <em>looks</em> familiar.</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>What is idiomatic code?</h2>
+<ul>
+  <li>Simple definition: Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
+  <li>More important: idiomatic code is the community standard way or writing code; it <em>looks</em> familiar.</li>
   <li>Familiarity perhaps more important than anything else</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Syntax and semantics influence idioms</h2>
+<ul>
+  <li>PLs influence programmers in subtle ways</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Syntax and semantics influence idioms</h2>
+<ul>
+  <li>PLs influence programmers in subtle ways</li>
+  <li>Simple example: parens are optional in Ruby. Lets you do:
+
+<pre><code class="ruby">it "is a testing example" do
+end</pre></code>
+
+  Instead of:
+
+<pre><code class="ruby">it("is a testing example" do
+end)</pre></code></li>
 </ul>
 </section>
 
@@ -231,9 +200,7 @@ end)</pre></code></li>
 </section>
 
 <section class="slide">
-<h2>Declaration and assignment</h2>
-<pre><code class="golang">
-package main
+<pre><code class="golang">package main
 
 func main() {
   a := 1
@@ -257,7 +224,6 @@ func main() {
 </section>
 
 <section class="slide">
-<h2>Exports and imports</h2>
 <pre><code class="go">package braintree
 
 type CreditCard struct {
@@ -266,18 +232,17 @@ type CreditCard struct {
 }
 
 func ChargeCard(card CreditCard, amount int) {
-  valid := validateCharge(card, amount)
-  if valid {
-    runTransaction(card, amount)
-  }
+  valid := validateCard(card)
+  if valid { runTransaction(card, amount) }
 }
 
-func runTransaction(card CreditCard, amount int) {}
+func validateCard(card CreditCard) bool
+
+func runTransaction(card CreditCard, amount int)
 </pre></code>
 </section>
 
 <section class="slide">
-<h2>Exports and imports</h2>
 <pre><code class="go">package main
 
 import "braintree"
