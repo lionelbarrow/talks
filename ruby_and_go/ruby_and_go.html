@@ -181,6 +181,7 @@ end)</pre></code></li>
   <li>Developed mostly at Google, but open source</li>
   <li>Compiled, garbage collected, strongly typed, object-oriented*</li>
   <li>Lower level language than Ruby, but still aimed at web</li>
+  <li>Metaprogramming ability limited compared to Ruby, but probably won't talk about this</li>
   <li>Cool concurrency constructs that we won't talk about</li>
   <li>Very cool toolchain that we won't talk about</li>
 </ul>
@@ -245,11 +246,15 @@ func runTransaction(card CreditCard, amount int)
 <section class="slide">
 <pre><code class="go">package main
 
-import "braintree"
+import (
+  "braintree"
+  "fmt"
+)
 
 func main() {
   myCard := braintree.CreditCard{"5359", "314159265359"}
   braintree.ChargeCard(myCard, 100)
+  fmt.Println("Charged card ending in %v", myCard.Last4)
 }
 </pre></code>
 </section>
@@ -265,13 +270,31 @@ func main() {
 </section>
 
 <section class="slide">
+<pre><code class="go">package animals
+
+type Animal interface { Eat(Animal) }
+
+type Lion struct {}
+
+func (this Lion) Eat(prey Animal) {} // Lion implements Animal
+
+func (this Lion) Roar() {} // Lion has other methods
+
+func Feed(hunter, prey Animal) {
+  hunter.Eat(prey)
+  hunter.Roar() // Compiler error because declared type was Animal
+}
+</code></pre>
+</section>
+
+<section class="slide">
 <h2>Go style basics</h2>
 <p>Overall question: what are the design goals here?</p>
 <ul>
   <li>Declaration different from assignment</li>
   <li>Exporting values from packages controlled by case</li>
   <li>Interface-oriented type system -- compile-time duck typing*</li>
-  <li>Functions often return multiple values (destructuring bind)</li>
+  <li>Functions often return multiple values; this is used for error handling</li>
 </ul>
 </section>
 

@@ -1,21 +1,11 @@
-package numbers
+package animals
 
-type Number interface {
-  Value() float64
-}
+type Animal interface { Eat(Animal) }
 
-type Rational struct {
-  top int
-  bottom int
-}
+type Lion struct {}
 
-func (this Rational) Value() float64 {
-  return float64(this.top) / float64(this.bottom)
-}
+func (this Lion) Eat(prey Animal) {} // Lion implements Animal
 
-func (this Rational) Add(other Number) Number {
-  return this.Valu() + other.Value()
+func (this Lion) Roar() {} // Lion has other methods
 
-type Irrational struct {
-  approximateValue float64
-}
+func Feed(hunter, prey Animal) { hunter.Eat(prey) }
