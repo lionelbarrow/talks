@@ -22,15 +22,12 @@
   font-weight: normal;
   font-weight: 100;
 }
+
 .deck-container .slide pre {
-  border-color: #333;
+  border: 0px;
+  margin-bottom: 0px; 
 }
-.deck-container .slide pre code {
-  color: #fff;
-}
-.deck-container .slide code {
-  color: #f0a;
-}
+
 .deck-container .slide blockquote {
   font-size: 2em;
   padding: 1em 2em;

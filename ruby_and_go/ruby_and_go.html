@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="deckdotjs/extensions/status/deck.status.css">
 	<link rel="stylesheet" href="deckdotjs/extensions/hash/deck.hash.css">
 
+  <link rel="stylesheet" href="styles/default.css">
 	<link rel="stylesheet" href="deckdotjs/themes/style/editorial.css">
 
 	<script src="deckdotjs/modernizr.custom.js"></script>
@@ -25,26 +26,87 @@
 <body class="deck-container">
 
 <section class="slide">
-<h2>What Ruby developers can learn from Go</h2>
-<p>Lionel Barrow</p>
-<p>Developer at Braintree</p>
-<p>@lionelbarrow</p>
+<h1>What Ruby developers can learn from Go</h1>
+</section>
+
+<section class="slide">
+<h2>Come talk to me!</h2>
+  <p>Lionel Barrow - Developer at Braintree</p>
+  <p>@lionelbarrow - lionel.barrow@getbraintree.com</p>
+  <p>Always want to hear from our merchants</p>
+</section>
+
+<section class="slide">
+<h2>Why try new langages?</h2>
 </section>
 
 <section class="slide">
 <h2>Why try new langages?</h2>
 <ul>
   <li>PL communities have different practices, idioms, standards</li>
-  <li>Often idiosyncratic</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Why try new langages?</h2>
+<ul>
+  <li>PL communities have different practices, idioms, standards</li>
+  <li>Extremely idiosyncratic</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Why try new langages?</h2>
+<ul>
+  <li>PL communities have different practices, idioms, standards</li>
+  <li>Extremely idiosyncratic</li>
   <li>Difficult to judge practices until fairly deep into language</li>
 </ul>
 </section>
 
 <section class="slide">
-<h2>"It makes you a better developer"</h2>
+<h2>Why try new langages?</h2>
 <ul>
-  <li>Not because you can now write +1 langauges</li>
-  <li>Generalizes understanding of what you're doing</li>
+  <li>PL communities have different practices, idioms, standards</li>
+  <li>Extremely idiosyncratic</li>
+  <li>Difficult to judge practices until fairly deep into language</li>
+  <li>Vague notion that learning more languages will make us better developers. Can we be more concrete?</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Getting concrete</h2>
+</section>
+
+<section class="slide">
+<h2>Getting concrete</h2>
+<ul>
+  <li>You aren't better because you can now write +1 langauges</li>
+</ul>
+
+</section>
+<section class="slide">
+<h2>Getting concrete</h2>
+<ul>
+  <li>You aren't better because you can now write +1 langauges</li>
+  <li>Exposure to more examples allows you to generalize your understanding of what you're doing</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Getting concrete</h2>
+<ul>
+  <li>You aren't better because you can now write +1 langauges</li>
+  <li>Exposure to more examples allows you to generalize your understanding of what you're doing</li>
+  <li>Go back to old langauges and apply new paradigms, styles, idioms</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Getting concrete</h2>
+<ul>
+  <li>You aren't better because you can now write +1 langauges</li>
+  <li>Exposure to more examples allows you to generalize your understanding of what you're doing</li>
   <li>Go back to old langauges and apply new paradigms, styles, idioms</li>
   <li>Applies to all aspects of old languages: toolchain, source code organization, dependency management,
   testing style, deployment system, ... everything</li>
@@ -52,13 +114,95 @@
 </section>
 
 <section class="slide">
+<h2>Getting concrete</h2>
+<ul>
+  <li>You aren't better because you can now write +1 langauges</li>
+  <li>Exposure to more examples allows you to generalize your understanding of what you're doing</li>
+  <li>Go back to old langauges and apply new paradigms, styles, idioms</li>
+  <li>Applies to all aspects of old languages: toolchain, source code organization, dependency management,
+  testing style, deployment system, ... everything</li>
+  <li>But most important: understand idiomatic style of old language</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>What is idiomatic code?</h2>
+</section>
+
+<section class="slide">
 <h2>What is idiomatic code?</h2>
 <ul>
   <li>PLs influence programmers in subtle ways</li>
-  <li>it "foos the bar" do end vs it("foos the bar", do end)</li>
-  <li>Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
-  <li>Socially constructed; it <em>looks</em> familiar.</li>
-  <li>Familiarity just as large of an advantage as leverage on language</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>What is idiomatic code?</h2>
+<ul>
+  <li>PLs influence programmers in subtle ways</li>
+  <li>Simple example: parens are optional in Ruby. Lets you do:
+
+<pre><code class="ruby">it "is a testing example" do
+end</pre></code>
+
+  Instead of:
+
+<pre><code class="ruby">it("is a testing example" do
+end)</pre></code></li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>What is idiomatic code?</h2>
+<ul>
+  <li>PLs influence programmers in subtle ways</li>
+  <li>Simple example: parens are optional in Ruby. Lets you do:
+
+<pre><code class="ruby">it "is a testing example" do
+end</pre></code>
+
+  Instead of:
+
+<pre><code class="ruby">it("is a testing example" do
+end)</pre></code></li>
+<li>Simple definition: Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>What is idiomatic code?</h2>
+<ul>
+  <li>PLs influence programmers in subtle ways</li>
+  <li>Simple example: parens are optional in Ruby. Lets you do:
+
+<pre><code class="ruby">it "is a testing example" do
+end</pre></code>
+
+  Instead of:
+
+<pre><code class="ruby">it("is a testing example" do
+end)</pre></code></li>
+  <li>Simple definition: Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
+  <li>More importantly, idiomatic code is the community standard way or writing code; it <em>looks</em> familiar.</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>What is idiomatic code?</h2>
+<ul>
+  <li>PLs influence programmers in subtle ways</li>
+  <li>Simple example: parens are optional in Ruby. Lets you do:
+
+<pre><code class="ruby">it "is a testing example" do
+end</pre></code>
+
+  Instead of:
+
+<pre><code class="ruby">it("is a testing example" do
+end)</pre></code></li>
+  <li>Simple definition: Idiomatic code uses language semantics and syntax to get greatest possible leverage on a problem</li>
+  <li>More importantly, idiomatic code is the community standard way or writing code; it <em>looks</em> familiar.</li>
+  <li>Familiarity perhaps more important than anything else</li>
 </ul>
 </section>
 
@@ -74,15 +218,98 @@
 </section>
 
 <section class="slide">
-<h2>Go basics</h2>
+<h2>Go style basics</h2>
+<p>Overall question: what are the design goals here?</p>
+</section>
+
+<section class="slide">
+<h2>Go style basics</h2>
+<p>Overall question: what are the design goals here?</p>
+<ul>
+  <li>Declaration different from assignment</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Declaration and assignment</h2>
+<pre><code class="golang">
+package main
+
+func main() {
+  a := 1
+  a = 2
+
+  b = 3 // Compiler error since b has not been declared
+
+  var c int
+  c = 4
+}
+</pre></code>
+</section>
+
+<section class="slide">
+<h2>Go style basics</h2>
+<p>Overall question: what are the design goals here?</p>
+<ul>
+  <li>Declaration different from assignment</li>
+  <li>Exporting values from packages controlled by case</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Exports and imports</h2>
+<pre><code class="go">package braintree
+
+type CreditCard struct {
+  Last4 string      // public
+  number string     // not public
+}
+
+func ChargeCard(card CreditCard, amount int) {
+  valid := validateCharge(card, amount)
+  if valid {
+    runTransaction(card, amount)
+  }
+}
+
+func runTransaction(card CreditCard, amount int) {}
+</pre></code>
+</section>
+
+<section class="slide">
+<h2>Exports and imports</h2>
+<pre><code class="go">package main
+
+import "braintree"
+
+func main() {
+  myCard := braintree.CreditCard{"5359", "314159265359"}
+  braintree.ChargeCard(myCard, 100)
+}
+</pre></code>
+</section>
+
+<section class="slide">
+<h2>Go style basics</h2>
+<p>Overall question: what are the design goals here?</p>
+<ul>
+  <li>Declaration different from assignment</li>
+  <li>Exporting values from packages controlled by case</li>
+  <li>Interface-oriented type system -- compile-time duck typing*</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Go style basics</h2>
+<p>Overall question: what are the design goals here?</p>
 <ul>
   <li>Declaration different from assignment</li>
   <li>Exporting values from packages controlled by case</li>
   <li>Interface-oriented type system -- compile-time duck typing*</li>
   <li>Functions often return multiple values (destructuring bind)</li>
-  <li>Pass-by-value, with pointers</li>
 </ul>
 </section>
+
 
 <script src="deckdotjs/jquery-1.7.2.min.js"></script>
 <script src="deckdotjs/core/deck.core.js"></script>
@@ -98,5 +325,7 @@ $(function() {
 });
 </script>
 
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
