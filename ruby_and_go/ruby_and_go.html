@@ -154,6 +154,10 @@
 
 <section class="slide">
 <h2>Syntax and semantics influence idioms</h2>
+</section>
+
+<section class="slide">
+<h2>Syntax and semantics influence idioms</h2>
 <ul>
   <li>PLs influence programmers in subtle ways</li>
 </ul>
@@ -163,6 +167,15 @@
 <h2>Syntax and semantics influence idioms</h2>
 <ul>
   <li>PLs influence programmers in subtle ways</li>
+  <li>Goal of language designer: push programmers into writing good code naturally</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Syntax and semantics influence idioms</h2>
+<ul>
+  <li>PLs influence programmers in subtle ways</li>
+  <li>Goal of language designer: push programmers into writing good code naturally</li>
   <li>Simple example: parens are optional in Ruby. Lets you do:
 
 <pre><code class="ruby">it "is a testing example" do
@@ -170,7 +183,7 @@ end</pre></code>
 
   Instead of:
 
-<pre><code class="ruby">it("is a testing example" do
+<pre><code class="ruby">it("is a testing example", do
 end)</pre></code></li>
 </ul>
 </section>
@@ -294,10 +307,31 @@ func Feed(hunter, prey Animal) {
   <li>Declaration different from assignment</li>
   <li>Exporting values from packages controlled by case</li>
   <li>Interface-oriented type system -- compile-time duck typing*</li>
-  <li>Functions often return multiple values; this is used for error handling</li>
+  <li>Functions often return multiple values; used for error handling</li>
 </ul>
 </section>
 
+<section class="slide">
+<pre><code class="go">package main
+
+import (
+  "errors"
+  "fmt"
+  "math/rand"
+)
+
+func ComplicatedOperation(input string) (string, error) {
+  if rand.Rand() > 0.5 { return "Success!", nil }
+  return "", errors.New("Not enough bananas")
+}
+
+func main() {
+  output, err := ComplicatedOperation("input")
+  if err != nil { fmt.Println("Error! " + err.Error()) }
+  else { fmt.Println(output) }
+}
+</code></pre>
+</section>
 
 <script src="deckdotjs/jquery-1.7.2.min.js"></script>
 <script src="deckdotjs/core/deck.core.js"></script>
