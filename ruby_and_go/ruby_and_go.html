@@ -30,9 +30,7 @@
 </section>
 
 <section class="slide">
-<p>Lionel Barrow - Developer at Braintree</p>
-<p>@lionelbarrow - lionel.barrow@getbraintree.com</p>
-<p>Always want to hear from our merchants</p>
+<h1>Lionel Barrow @lionelbarrow</h1>
 </section>
 
 <section class="slide">
@@ -159,14 +157,6 @@
 <section class="slide">
 <h2>Syntax and semantics influence idioms</h2>
 <ul>
-  <li>PLs influence programmers in subtle ways</li>
-</ul>
-</section>
-
-<section class="slide">
-<h2>Syntax and semantics influence idioms</h2>
-<ul>
-  <li>PLs influence programmers in subtle ways</li>
   <li>Goal of language designer: push programmers into writing good code naturally</li>
 </ul>
 </section>
@@ -174,9 +164,17 @@
 <section class="slide">
 <h2>Syntax and semantics influence idioms</h2>
 <ul>
-  <li>PLs influence programmers in subtle ways</li>
   <li>Goal of language designer: push programmers into writing good code naturally</li>
-  <li>Simple example: parens are optional in Ruby. Lets you do:
+  <li>PLs influence programmers in subtle ways</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Syntax and semantics influence idioms</h2>
+<ul>
+  <li>Goal of language designer: push programmers into writing good code naturally</li>
+  <li>PLs influence programmers in subtle ways</li>
+  <li>Simple example:
 
 <pre><code class="ruby">it "is a testing example" do
 end</pre></code>
@@ -194,9 +192,12 @@ end)</pre></code></li>
   <li>Developed mostly at Google, but open source</li>
   <li>Compiled, garbage collected, strongly typed, object-oriented*</li>
   <li>Lower level language than Ruby, but still aimed at web</li>
-  <li>Metaprogramming ability limited compared to Ruby, but probably won't talk about this</li>
-  <li>Cool concurrency constructs that we won't talk about</li>
-  <li>Very cool toolchain that we won't talk about</li>
+</ul>
+<p>Stuff we won't talk about today:</p>
+<ul>
+  <li>Metaprogramming ability limited compared to Ruby</li>
+  <li>Concurrency constructs: goroutines, channels</li>
+  <li>Toolchain: go fmt, go fix, GOPATH</li>
 </ul>
 </section>
 
@@ -320,17 +321,51 @@ import (
   "math/rand"
 )
 
-func ComplicatedOperation(input string) (string, error) {
+func complicatedOperation(input string) (string, error) {
   if rand.Rand() > 0.5 { return "Success!", nil }
   return "", errors.New("Not enough bananas")
 }
 
 func main() {
-  output, err := ComplicatedOperation("input")
+  output, err := complicatedOperation("input")
   if err != nil { fmt.Println("Error! " + err.Error()) }
   else { fmt.Println(output) }
 }
 </code></pre>
+</section>
+
+<section class="slide">
+<h2>Where does this push us?</h2>
+<ul>
+  <li>Small, composable packages that do one thing well</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Where does this push us?</h2>
+<ul>
+  <li>Small, composable packages that do one thing well</li>
+  <li>Focus is on design of package API</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Where does this push us?</h2>
+<ul>
+  <li>Small, composable packages that do one thing well</li>
+  <li>Focus is on design of package API</li>
+  <li>Error handling mostly done at level of package client</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Where does this push us?</h2>
+<ul>
+  <li>Small, composable packages that do one thing well</li>
+  <li>Focus is on design of package API</li>
+  <li>Error handling mostly done at level of package client</li>
+  <li>Where does business logic live?</li>
+</ul>
 </section>
 
 <script src="deckdotjs/jquery-1.7.2.min.js"></script>
