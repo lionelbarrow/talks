@@ -45,14 +45,8 @@
   color: #aaa;
   text-shadow: 0 0 15px #fff, 0 0 2px #fff;
 }
-.deck-container .slide ::-moz-selection {
-  background: #a0f;
-}
-.deck-container .slide ::selection {
-  background: #a0f;
-}
+
 .deck-container .slide a, .deck-container .slide a:hover, .deck-container .slide a:focus, .deck-container .slide a:active, .deck-container .slide a:visited {
-  color: #f0a;
   text-decoration: none;
 }
 .deck-container .slide a:hover, .deck-container .slide a:focus {
